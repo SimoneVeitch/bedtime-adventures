@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ItemContainer from "./ItemContainer";
+import SushiContainer from "./SushiContainer";
 import Table from "./Table";
 import ErrorOverlay from "./ErrorOverlay";
 
-const API = "http://localhost:3001/sushis";
+const API = "http://localhost:3000/sushis";
 
 function App() {
   const [sushis, setSushis] = useState([])

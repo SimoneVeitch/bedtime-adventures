@@ -4,7 +4,6 @@ function Sushi({sushi, handleSushiClick}) {
   return (
     <div className="sushi">
       <div className="plate" onClick={handleSushiClick}>
-        {/* Tell me if this sushi has been eaten! */}
         {sushi.eaten ? null : (
           <img
             id={sushi.id}
