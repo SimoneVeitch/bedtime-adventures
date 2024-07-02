@@ -1,8 +1,8 @@
 import React from "react";
 
-function BackButton({ getPreviousSushis }) {
+function BackButton({ getPreviousItems }) {
   return (
-    <button onClick={getPreviousSushis} style={{ fontSize: "24px", cursor: "pointer" }} className="arrow-button">
+    <button onClick={getPreviousItems} style={{ fontSize: "24px", cursor: "pointer" }} className="arrow-button">
       &larr;
     </button>
   );
