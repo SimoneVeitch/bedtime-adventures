@@ -1,17 +1,20 @@
 import React from "react";
 import MoreButton from "./MoreButton";
+import BackButton from "./BackButton";
 import Sushi from "./Sushi";
 
-function SushiContainer({fourSushis, getSushis, handleSushiClick}) {
-    
-  const sushiList = fourSushis.map(s => {
-    return <Sushi key={s.id} sushi={s} handleSushiClick={handleSushiClick}/>
-  })
+function SushiContainer({ fourSushis, getNextSushis, getPreviousSushis, handleSushiClick }) {
+  const sushiList = fourSushis.map(s => (
+    <div key={s.id} className="sushi-item">
+      <Sushi sushi={s} handleSushiClick={handleSushiClick} />
+    </div>
+  ));
 
   return (
     <div className="belt">
+      <BackButton getPreviousSushis={getPreviousSushis} />
       {sushiList}
-      <MoreButton getSushis={getSushis}/>
+      <MoreButton getNextSushis={getNextSushis} />
     </div>
   );
 }
