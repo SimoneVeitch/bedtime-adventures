@@ -43,6 +43,7 @@ body {
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
   align-items: center; 
+  position: relative;
 }
 
 

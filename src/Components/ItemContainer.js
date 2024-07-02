@@ -3,8 +3,9 @@ import MoreButton from "./MoreButton";
 import BackButton from "./BackButton";
 import SleepItems from "./SleepItems";
 
-function ItemContainer({ fourItems, getNextItems, getPreviousItems, handleItemClick }) {
-  const itemList = fourItems.map(s => (
+function ItemContainer({ items, getNextItems, getPreviousItems, handleItemClick }) {
+
+  const itemList = items.map(s => (
     <div key={s.id} className="bed-item">
       <SleepItems item={s} handleItemClick={handleItemClick} />
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ItemContainer from "./ItemContainer";
 import Bed from "./Bed";
 import PointsBox from "./PointsBox";
@@ -151,17 +151,35 @@ function App() {
 
   const [items, setItems] = useState(initialItems.map(s => ({ ...s, clicked: false })));
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [clickedItems, setClickedItems] = useState([]); // Initialize as an array
+  const [clickedItems, setClickedItems] = useState([]); 
   const [points, setPoints] = useState(50);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [displayItems, setDisplayItems] = useState(4);
+
+  useEffect(() => {
+    const updateItemsDisplayed = () => {
+      if (window.matchMedia("(max-width: 600px)").matches) {
+        setDisplayItems(2); // Display 2 items on mobile
+      } else {
+        setDisplayItems(4); // Display 4 items on larger screens
+      }
+    };
+
+    updateItemsDisplayed(); // Check on initial render
+    window.addEventListener("resize", updateItemsDisplayed); // Check on window resize
+
+    return () => {
+      window.removeEventListener("resize", updateItemsDisplayed);
+    };
+  }, []);
 
   function getNextItems() {
-    const newIndex = (currentIndex + 4) % items.length;
+    const newIndex = (currentIndex + displayItems) % items.length;
     setCurrentIndex(newIndex);
   }
 
   function getPreviousItems() {
-    const newIndex = (currentIndex - 4 + items.length) % items.length;
+    const newIndex = (currentIndex - displayItems + items.length) % items.length;
     setCurrentIndex(newIndex);
   }
 
@@ -177,18 +195,16 @@ function App() {
     }
   }
 
-  const fourItems = items.slice(currentIndex, currentIndex + 4);
-
   return (
     <div className="app">
       <h1>Bedtime</h1>
       <p>Get your kid to sleep</p>
       {showErrorMessage && <ErrorOverlay message="You've run out of money" />}
       <ItemContainer
-        fourItems={fourItems}
-        getNextItems={getNextItems}
-        getPreviousItems={getPreviousItems}
-        handleItemClick={handleItemClick}
+       items={items.slice(currentIndex, currentIndex + displayItems)}
+       getNextItems={getNextItems}
+       getPreviousItems={getPreviousItems}
+       handleItemClick={handleItemClick}
       />
       <div className="main-content">
         <PointsBox points={points} />
