@@ -3,6 +3,8 @@ import ItemContainer from "./ItemContainer";
 import Bed from "./Bed";
 import PointsBox from "./PointsBox";
 import ErrorOverlay from "./ErrorOverlay";
+import SuccessOverlay from "./SuccessOverlay";
+import Rules from './Rules';
 
 import ball from "../sleep_items/ball.png"
 import blanket from "../sleep_items/blanket.png"
@@ -32,120 +34,140 @@ function App() {
       name: "Ball",
       img_url: ball,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 2,
       name: "Blanket",
       img_url: blanket,
       points: 10,
+      action: 'add',
     },
     {
       id: 3,
       name: "Book",
       img_url: book,
       points: 10,
+      action: 'add',
     },
     {
       id: 4,
       name: "Cheese",
       img_url: cheese,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 5,
       name: "Dog",
       img_url: dog,
       points: 10,
+      action: 'add',
     },
     {
       id: 6,
       name: "Game",
       img_url: game,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 7,
       name: "Ghost",
       img_url: ghost,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 8,
       name: "Horse",
       img_url: horse,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 9,
       name: "Icecream",
       img_url: icecream,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 10,
       name: "ipad",
       img_url: ipad,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 11,
       name: "Light",
       img_url: light,
       points: 10,
+      action: 'add',
     },
     {
       id: 12,
       name: "Mask",
       img_url: mask,
       points: 10,
+      action: 'add',
     },
     {
       id: 13,
       name: "Microphone",
       img_url: microphone,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 14,
       name: "Milk",
       img_url: milk,
       points: 10,
+      action: 'add',
     },
     {
       id: 15,
       name: "Paint",
       img_url: paint,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 16,
       name: "Pillow",
       img_url: pillow,
       points: 10,
+      action: 'add',
     },
     {
       id: 17,
       name: "Robot",
       img_url: robot,
       points: 10,
+      action: 'deduct',
     },
     {
       id: 18,
       name: "Music",
       img_url: sleepmusic,
       points: 10,
+      action: 'add',
     },
     {
       id: 19,
       name: "Socks",
       img_url: socks,
       points: 10,
+      action: 'add',
     },
     {
       id: 20,
       name: "Teddy",
       img_url: teddy,
       points: 10,
+      action: 'add',
     }
   ];
 
@@ -155,23 +177,33 @@ function App() {
   const [points, setPoints] = useState(50);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [displayItems, setDisplayItems] = useState(4);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   useEffect(() => {
     const updateItemsDisplayed = () => {
       if (window.matchMedia("(max-width: 600px)").matches) {
-        setDisplayItems(2); // Display 2 items on mobile
+        setDisplayItems(2); 
       } else {
-        setDisplayItems(4); // Display 4 items on larger screens
+        setDisplayItems(4); 
       }
     };
 
-    updateItemsDisplayed(); // Check on initial render
-    window.addEventListener("resize", updateItemsDisplayed); // Check on window resize
+    updateItemsDisplayed();
+    window.addEventListener("resize", updateItemsDisplayed); 
 
     return () => {
       window.removeEventListener("resize", updateItemsDisplayed);
     };
   }, []);
+
+  useEffect(() => {
+    if (points >= 100) {
+      const timer = setTimeout(() => {
+        setShowSuccessMessage(true);
+      }, 2000); 
+      return () => clearTimeout(timer);
+    }
+  }, [points]);
 
   function getNextItems() {
     const newIndex = (currentIndex + displayItems) % items.length;
@@ -185,21 +217,34 @@ function App() {
 
   function handleItemClick(e) {
     const clickedItem = items.find(s => s.id === parseInt(e.target.id));
-    if (clickedItem.points <= points && !clickedItem.clicked) {
+    if (!clickedItem.clicked) {
       clickedItem.clicked = true;
-      setClickedItems([...clickedItems, clickedItem]); // Correctly update the array
-      const newPoints = points - clickedItem.points;
+      setClickedItems([...clickedItems, clickedItem]); 
+      let newPoints;
+      if (clickedItem.action === 'add') {
+        newPoints = points + clickedItem.points;
+      } else if (clickedItem.action === 'deduct') {
+        newPoints = points - clickedItem.points;
+      }
       setPoints(newPoints);
-    } else if (points <= 5) {
-      setShowErrorMessage(true);
+
+      if (newPoints <= 5) {
+        setShowErrorMessage(true);
+      }
+      setItems(items.filter(item => item.id !== clickedItem.id));
     }
   }
 
   return (
     <div className="app">
-      <h1>Bedtime</h1>
-      <p>Get your kid to sleep</p>
-      {showErrorMessage && <ErrorOverlay message="You've run out of money" />}
+      <h1>BEDTIME ADVENTURES</h1>
+      <p className="intro-text">Welcome to "Bedtime Adventures"!<br /><br />
+        In this simple game, your mission is clear: gently guide your child into the land of dreams. We all know that achieving this bedtime bliss is a delicate dance of routine and comfort. From cozy blankets to soothing melodies, every item plays a crucial role in setting the stage for a restful night.<br /><br />
+        Navigate through the list of sleep-inducing items, each chosen to lull your little one into sweet slumber. But be mindful in your choices, avoiding anything that might spark nighttime energy. It's a game of strategy and care, where success means a peaceful night for both you and your child.<br /><br />
+        Are you ready to embark on this bedtime journey? Choose wisely, and may bedtime magic be on your side!</p>
+      <Rules />
+      {showErrorMessage && <ErrorOverlay />}
+      {showSuccessMessage && <SuccessOverlay />}
       <ItemContainer
        items={items.slice(currentIndex, currentIndex + displayItems)}
        getNextItems={getNextItems}
@@ -208,7 +253,7 @@ function App() {
       />
       <div className="main-content">
         <PointsBox points={points} />
-        <Bed clickedItems={clickedItems} points={points}/> {/* Correctly pass the clickedItems */}
+        <Bed clickedItems={clickedItems} points={points}/>
       </div>
     </div>
   );

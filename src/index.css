@@ -11,10 +11,26 @@ body {
   align-items: center;
 }
 
+h1 {
+  margin-top: 50px;
+  font-size: 40px;
+}
+
 .item-container {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.intro-text {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.rules-content {
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: left;
 }
 
 .main-content {
@@ -26,6 +42,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   align-items: flex-start;
+  position: relative;
 }
 
 .points-box {
@@ -36,14 +53,14 @@ body {
   margin-bottom: 0px;
   text-align: center;
   height: 180px;
-  align-self: flex-start;
   border-radius: 50%;
-  margin-left: 100px;
-  margin-top: 30px;
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
+  position: absolute; 
+  top: 10%; /* Adjust as needed to place correctly */
+  left: 20%;
+  transform: translateX(-50%);
+  display: flex; 
+  justify-content: center;
   align-items: center; 
-  position: relative;
 }
 
 
@@ -95,14 +112,50 @@ body {
   }
 
   .points-box {
-    order: -1;
+    position: absolute; /* Position the points box absolutely */
+    top: -3%; /* Adjust as needed to place correctly */
+    left: 23%;
+    height: 120px;
+    width: 120px;
+    transform: translateX(-50%);
+  }
+
+  .points-box h3 {
+    font-size: 15px;
   }
 
   .bed {
     width: 100%;
-    padding-bottom: 60%;
-    margin-bottom: 20px;
+    padding-bottom: 80%;
+    margin-bottom: 10px;
   }
+
+  .bed-sleep {
+    width: 100%;
+    padding-bottom: 80%;
+    margin-bottom: 10px;
+  }
+
+  .belt {
+    margin-bottom: 70px;
+  }
+
+  .bed-item {
+    min-width: 100px; /* Make bed items smaller */
+  }
+
+  .intro-text {
+    font-size: 15px;
+  }
+  
+  .rules-content {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
 }
 
 .bed-item {
@@ -147,8 +200,58 @@ body {
 }
 
 .error-message {
-  background-color: white;
+  background-color: rgb(246, 237, 217);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.success-message {
+  background-color: rgb(246, 237, 217);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.rules {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rules-header {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.arrow {
+  margin-left: 10px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 7.5px 0 7.5px;
+  border-color: #333 transparent transparent transparent;
+  transition: transform 0.3s ease;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.rules-content {
+  margin-top: 10px;
 }
