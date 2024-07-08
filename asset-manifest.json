@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/bedtime-adventures/static/css/main.8e27e2ed.css",
+    "main.js": "/bedtime-adventures/static/js/main.bb46a46e.js",
+    "static/media/girl_idle_smile.gif": "/bedtime-adventures/static/media/girl_idle_smile.69fb65ab536569c55efc.gif",
+    "static/media/girl_idle_tired.gif": "/bedtime-adventures/static/media/girl_idle_tired.c16013f49336a3bb3e41.gif",
+    "static/media/girl_idle_start.gif": "/bedtime-adventures/static/media/girl_idle_start.1877f738c9f8b8b6513e.gif",
+    "static/media/girl_idle_awake.gif": "/bedtime-adventures/static/media/girl_idle_awake.3ec233ebf2b03e2e204c.gif",
+    "static/media/girl_asleep.gif": "/bedtime-adventures/static/media/girl_asleep.2aa26b3dfb31c9c08769.gif",
+    "static/media/teddy.png": "/bedtime-adventures/static/media/teddy.f4eea41f18c003ef65c0.png",
+    "static/media/dog.png": "/bedtime-adventures/static/media/dog.5972dd93f533dbc20c3c.png",
+    "static/media/sleepmusic.png": "/bedtime-adventures/static/media/sleepmusic.8304c3e7244da550ef2f.png",
+    "static/media/paint.png": "/bedtime-adventures/static/media/paint.3dc452efaac36d68760a.png",
+    "static/media/socks.png": "/bedtime-adventures/static/media/socks.079ce7492c55cbde7b19.png",
+    "static/media/microphone.png": "/bedtime-adventures/static/media/microphone.d2a579a6c9f54582e9e6.png",
+    "static/media/blanket.png": "/bedtime-adventures/static/media/blanket.c30f10ad82a8366a43a5.png",
+    "static/media/mask.png": "/bedtime-adventures/static/media/mask.bbc92cc94d11ae457281.png",
+    "static/media/cheese.png": "/bedtime-adventures/static/media/cheese.0f83bb7af6a19a3bbb9c.png",
+    "static/media/light.png": "/bedtime-adventures/static/media/light.927ebf2ba4f11a746d11.png",
+    "static/media/icecream.png": "/bedtime-adventures/static/media/icecream.93965c9432cb579f9901.png",
+    "static/media/pillow.png": "/bedtime-adventures/static/media/pillow.1b5eec14998a39f410a4.png",
+    "static/media/game.png": "/bedtime-adventures/static/media/game.646ee70f0a1f100b7ac2.png",
+    "static/media/robot.png": "/bedtime-adventures/static/media/robot.29657037506dddbc4254.png",
+    "static/media/horse.png": "/bedtime-adventures/static/media/horse.87eff75cbdb4aedd4165.png",
+    "static/media/ball.png": "/bedtime-adventures/static/media/ball.0c5393b1d89177c2fc34.png",
+    "static/media/ipad.png": "/bedtime-adventures/static/media/ipad.3bf73ff13d9c6d985863.png",
+    "index.html": "/bedtime-adventures/index.html",
+    "main.8e27e2ed.css.map": "/bedtime-adventures/static/css/main.8e27e2ed.css.map",
+    "main.bb46a46e.js.map": "/bedtime-adventures/static/js/main.bb46a46e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e27e2ed.css",
+    "static/js/main.bb46a46e.js"
+  ]
+}
