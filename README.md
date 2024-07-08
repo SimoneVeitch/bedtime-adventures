@@ -1,72 +1,41 @@
-Text update
+## Bedtime Adventures - My first independent React app
 
-# Getting Started with Create React App
+## Bedtime Adventures summary
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to "Bedtime Adventures"!
 
-## Available Scripts
+In this simple game, your mission is clear: gently guide your child into the land of dreams. We all know that achieving this bedtime bliss is a delicate dance of routine and comfort. From cozy blankets to soothing melodies, every item plays a crucial role in setting the stage for a restful night.
 
-In the project directory, you can run:
+Navigate through the list of sleep-inducing items, each chosen to lull your little one into sweet slumber. But be mindful in your choices, avoiding anything that might spark nighttime energy. It's a game of strategy and care, where success means a peaceful night for both you and your child.
 
-### `npm start`
+Are you ready to embark on this bedtime journey? Choose wisely, and may bedtime magic be on your side!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project detail 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bedtime adventures is my first personal React build, which is not a response to an Academi Xi project. 
 
-### `npm test`
+Bedtime Adventures is a simple game, where users can select from a belt of items to try to get "their" kid to fall asleep. Each item has a number of points attached that will either add to or deduct from the total number of points the user has. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The aim of the game is to get to 100 points, at which point the user will have won the game, ie, got their kid to fall asleep. If the user gets to 0 points or run out of items they will have lost the game. 
 
-### `npm run build`
+At certain point totals the kid will either start to look more awake or more tired to cue the user to whether or not they are close to winning or loosing. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The web app is used for my own personal purposes to continue working on my skills in React. It uses a lot of conditional rendering to achieve the a game-feel. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I have added styling using CSS. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting started
 
-### `npm run eject`
+Please use Chrome as your browser for the best experience. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app has only been tested on Chrome and Safari, which are the most commonly used browsers in Australia (source: https://gs.statcounter.com/browser-market-share/all/australia).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contribution
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Please do not contribute to this project or make any amends to the original files. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Acknowledgement
 
-## Learn More
+The app features vector files, which I have downloaded from FreePik, https://www.freepik.com/. This includes all images used in  the belt, all app logos and the vector of the girl in bed. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All vector files have been edited by me in Adobe Illustrated, and the animations have been done using a combination of Adobe Illustrator and https://ezgif.com/maker. 
