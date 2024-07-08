@@ -28,6 +28,8 @@ function Bed({ points }) {
     gifSrc = gifSmile;
   } else if (points === 10) {
     gifSrc = gifAwake;
+  } else if (points === 0) {
+    gifSrc = gifAwake;
   } else {
     gifSrc = gifStart;
   }

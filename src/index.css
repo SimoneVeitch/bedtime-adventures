@@ -1,9 +1,13 @@
+/* Global */
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: rgb(190, 213, 255);
 }
+
+/* App, intro and rules */
 
 .app {
   display: flex;
@@ -13,7 +17,11 @@ body {
 
 h1 {
   margin-top: 50px;
-  font-size: 40px;
+  font-size: 50px;
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .item-container {
@@ -25,187 +33,61 @@ h1 {
 .intro-text {
   margin-left: 80px;
   margin-right: 80px;
+  line-height: 1.4;
+  text-align: justify;
+  max-width: 1000px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
 }
 
 .rules-content {
   margin-left: 80px;
   margin-right: 80px;
   text-align: left;
+  line-height: 1.4;
+  text-align: justify;
+  max-width: 1000px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
 }
 
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-  box-sizing: border-box;
-  align-items: flex-start;
-  position: relative;
-}
-
-/* .points-box {
-  background-color: rgb(246, 237, 217);
-  border: none;
-  box-sizing: border-box;
-  width: 180px;
-  margin-bottom: 0px;
+.rules {
+  margin-top: 20px;
   text-align: center;
-  height: 180px;
-  border-radius: 50%;
-  position: absolute; 
-  top: 10%; 
-  left: 20%;
-  transform: translateX(-50%);
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
 }
 
-
-.points-box h3 {
-  align-content: center;
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  margin: 0;
+.rules-header {
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.bed-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-}
-
-.bed {
-  background-image: url("../public/kid/awake.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.arrow {
+  margin-left: 10px;
+  display: inline-block;
+  width: 0;
   height: 0;
-  width: 100%;
-  padding-bottom: 60%;
+  border-style: solid;
+  border-width: 10px 7.5px 0 7.5px;
+  border-color: #333 transparent transparent transparent;
+  transition: transform 0.3s ease;
 }
 
-.bed-sleep {
-  background-image: url("../public/kid/asleep.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 0;
-  width: 100%;
-  padding-bottom: 60%;
-  margin-top: 0; 
+.arrow.up {
+  transform: rotate(180deg);
 }
 
-.remaining {
-  margin: 0;
-}  */
-
-.bed-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  position: relative; /* Ensure relative positioning for absolute children */
+.rules-content {
+  margin-top: 10px;
 }
 
-.bed {
-  position: relative;
-  width: 60%; /* Adjust width of the video */
-  padding-bottom: 60%; /* Aspect ratio trick */
-  overflow: hidden; /* Ensures the video doesn't overflow */
-}
-
-.bed video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensure it stays behind other content */
-}
-
-.points-box {
-  background-color: rgb(246, 237, 217);
-  border: none;
-  box-sizing: border-box;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  position: absolute;
-  top: 10%; /* Adjust top position */
-  left: 20%; /* Center horizontally */
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1; /* Ensure it stays above the video */
-}
-
-.points-box h3 {
-  font-size: 20px;
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .points-box {
-    position: absolute; /* Position the points box absolutely */
-    top: -3%; /* Adjust as needed to place correctly */
-    left: 23%;
-    height: 120px;
-    width: 120px;
-    transform: translateX(-50%);
-  }
-
-  .points-box h3 {
-    font-size: 15px;
-  }
-
-  .bed {
-    width: 100%;
-    padding-bottom: 80%;
-    margin-bottom: 10px;
-  }
-
-  .bed-sleep {
-    width: 100%;
-    padding-bottom: 80%;
-    margin-bottom: 10px;
-  }
-
-  .belt {
-    margin-bottom: 70px;
-  }
-
-  .bed-item {
-    min-width: 100px; /* Make bed items smaller */
-  }
-
-  .intro-text {
-    font-size: 15px;
-  }
-  
-  .rules-content {
-    font-size: 15px;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-}
+/* Belt */
 
 .bed-item {
   flex: 1;
@@ -234,6 +116,64 @@ h1 {
   font-size: 24px;
   cursor: pointer;
 }
+
+/* Points and bed */
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  position: relative;
+}
+
+.bed-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  position: relative; 
+}
+
+.bed {
+  position: relative;
+  width: 60%;
+  overflow: hidden; 
+  margin-top: 10%; 
+}
+
+.points-box {
+  background-color: rgb(246, 237, 217);
+  border: none;
+  box-sizing: border-box;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 15%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+}
+
+.remaining {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 1.4;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Messages */
 
 .error-overlay {
   position: fixed;
@@ -276,31 +216,57 @@ h1 {
   text-align: center;
 }
 
-.rules {
-  margin-top: 20px;
-  text-align: center;
-}
+/* Responsive styles */
 
-.rules-header {
-  cursor: pointer;
-  font-size: 24px;
-}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.arrow {
-  margin-left: 10px;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 7.5px 0 7.5px;
-  border-color: #333 transparent transparent transparent;
-  transition: transform 0.3s ease;
-}
+  .points-box {
+    position: absolute; 
+    top: 2%; 
+    left: 8%;
+    height: 120px;
+    width: 120px;
+  }
 
-.arrow.up {
-  transform: rotate(180deg);
-}
+  .points-box h3 {
+    font-size: 15px;
+  }
 
-.rules-content {
-  margin-top: 10px;
+  .bed {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .belt {
+    margin-bottom: 50px;
+  }
+
+  .bed-item {
+    min-width: 100px; /* Make bed items smaller */
+  }
+
+  .intro-text {
+    font-size: 15px;
+  }
+  
+  .rules-content {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+ .intro-text, p {
+    font-size: 13px;
+  }
+
+  .rules-header {
+    font-size: 18px;
+  }
+
 }

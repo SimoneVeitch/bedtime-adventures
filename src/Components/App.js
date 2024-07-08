@@ -47,7 +47,7 @@ function App() {
       id: 3,
       name: "Book",
       img_url: book,
-      points: 10,
+      points: 20,
       action: 'add',
     },
     {
@@ -75,7 +75,7 @@ function App() {
       id: 7,
       name: "Ghost",
       img_url: ghost,
-      points: 10,
+      points: 20,
       action: 'deduct',
     },
     {
@@ -89,14 +89,14 @@ function App() {
       id: 9,
       name: "Icecream",
       img_url: icecream,
-      points: 10,
+      points: 20,
       action: 'deduct',
     },
     {
       id: 10,
       name: "ipad",
       img_url: ipad,
-      points: 10,
+      points: 20,
       action: 'deduct',
     },
     {
@@ -166,7 +166,7 @@ function App() {
       id: 20,
       name: "Teddy",
       img_url: teddy,
-      points: 10,
+      points: 20,
       action: 'add',
     }
   ];
@@ -232,6 +232,11 @@ function App() {
         setShowErrorMessage(true);
       }
       setItems(items.filter(item => item.id !== clickedItem.id));
+
+      const remainingItems = items.filter(item => !item.clicked);
+    if (remainingItems.length === 0) {
+      setShowErrorMessage(true);
+    }
     }
   }
 
