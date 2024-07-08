@@ -18,7 +18,7 @@ const Rules = () => {
           <p>The rules of the game are simple:<br /><br />
           Your objective is to accumulate 100 points to successfully guide your child into a peaceful slumber. Each item you select carries a specific number of points, either adding to your total and bringing you closer to victory, or subtracting and nudging you toward defeat.<br /><br />
           No two items are alike in their sleep-inducing powers; some have greater influence on sleepiness, while others might inadvertently rouse your child from their sleepy state. Choose your items wisely, for every decision counts.<br /><br />
-          Remember, reaching 0 points means you've lost the bedtime battle, requiring a fresh start to achieve victory once more.
+          Remember, reaching 0 points or running out of items means you've lost the bedtime battle, requiring a fresh start to achieve victory once more.
           </p>
         </div>
       )}
