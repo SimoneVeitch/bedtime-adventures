@@ -246,15 +246,20 @@ h1 {
   }
 
   .bed-item {
-    min-width: 100px; /* Make bed items smaller */
+    min-width: 50px; 
+    margin: 10px;
   }
 
   .intro-text {
     font-size: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   
   .rules-content {
     font-size: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   h1 {

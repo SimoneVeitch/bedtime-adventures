@@ -47,7 +47,7 @@ function App() {
       id: 3,
       name: "Book",
       img_url: book,
-      points: 20,
+      points: 10,
       action: 'add',
     },
     {
@@ -75,7 +75,7 @@ function App() {
       id: 7,
       name: "Ghost",
       img_url: ghost,
-      points: 20,
+      points: 10,
       action: 'deduct',
     },
     {
@@ -96,7 +96,7 @@ function App() {
       id: 10,
       name: "ipad",
       img_url: ipad,
-      points: 20,
+      points: 10,
       action: 'deduct',
     },
     {
@@ -166,7 +166,7 @@ function App() {
       id: 20,
       name: "Teddy",
       img_url: teddy,
-      points: 20,
+      points: 10,
       action: 'add',
     }
   ];
