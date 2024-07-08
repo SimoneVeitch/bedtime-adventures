@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bedtime-adventures/static/css/main.7578dab9.css",
-    "main.js": "/bedtime-adventures/static/js/main.bb46a46e.js",
+    "main.js": "/bedtime-adventures/static/js/main.7a771d68.js",
     "static/media/girl_idle_smile.gif": "/bedtime-adventures/static/media/girl_idle_smile.69fb65ab536569c55efc.gif",
     "static/media/girl_idle_tired.gif": "/bedtime-adventures/static/media/girl_idle_tired.c16013f49336a3bb3e41.gif",
     "static/media/girl_idle_start.gif": "/bedtime-adventures/static/media/girl_idle_start.1877f738c9f8b8b6513e.gif",
@@ -26,10 +26,10 @@
     "static/media/ipad.png": "/bedtime-adventures/static/media/ipad.3bf73ff13d9c6d985863.png",
     "index.html": "/bedtime-adventures/index.html",
     "main.7578dab9.css.map": "/bedtime-adventures/static/css/main.7578dab9.css.map",
-    "main.bb46a46e.js.map": "/bedtime-adventures/static/js/main.bb46a46e.js.map"
+    "main.7a771d68.js.map": "/bedtime-adventures/static/js/main.7a771d68.js.map"
   },
   "entrypoints": [
     "static/css/main.7578dab9.css",
-    "static/js/main.bb46a46e.js"
+    "static/js/main.7a771d68.js"
   ]
 }
